@@ -1,0 +1,17 @@
+open duper, 2
+open super, 1
+open luper, 2
+setxattr 0, security, user_u:sysadm_r:duper_t, 1
+setxattr 1, security, user_u:sysadm_r:super_t, 1
+setxattr 2, security, user_u:sysadm_r:init_t, 1
+setxattr 1, testing, this is still a test, 1
+setxattr 1, article.title, Innovations in Linux Management, 1
+setxattr 0, article.author, Wk Yksdjfhgaskjdfhg, 2
+setxattr 2, article.title, Innovations in Linux Management, 1
+getxattr 0, article.author, buf, 50
+getxattr 2, article.author, buf, 50
+getxattr 1, article.title, buf, 50
+getxattr 2, article.title, buf, 50
+close 0
+close 1
+close 2

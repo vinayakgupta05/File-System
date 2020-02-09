@@ -1,0 +1,102 @@
+************ Running commands from file cmd1 on filesystem in file fs **********
+creat: name = super; mode = 1
+creat: name = duper; mode = 2
+creat: name = luper; mode = 3
+close: 0
+close: 1
+open: name = duper; flags = 2
+close: 2
+close: 0
+***********  Done *************
+************ Running commands from file cmd2 on filesystem in file fs **********
+open: name = luper; flags = 2
+write: fd = 0; buf file = data1; unused = 1
+write: fd = 0; buf file = data2; unused = 1
+seek: fd = 0; size = 500
+read: fd = 0; buf = 0x9e92e88; size = 22
+
+ ======= read: 0; 22 bytes ==========
+rrrrrrrrrrrrrrrrrrrrrr
+seek: fd = 0; size = 1000
+read: fd = 0; buf = 0x9e92e88; size = 22
+
+ ======= read: 0; 22 bytes ==========
+rrrrrrrrrrrrrrrrrrrrtt
+close: 0
+***********  Done *************
+************ Running commands from file cmd3 on filesystem in file fs **********
+open: name = luper; flags = 2
+setxattr: fd: 0; attr: testing; value: basictestvalue; flags: 0x1
+setxattr: succeeded
+getxattr: fd: 0; attr: testing; buf: 0x8531890, name_size: 7; value_size: 30
+testing=basictestvalue
+setxattr: fd: 0; attr: article.title; value: Innovations in Window Management; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 0; attr: article.author; value: Wkhdasgfkhf Yksdjfhgaskjdfhg; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 0; attr: article.venues; value: Newsforge - Los Angeles Times -  Wkhdasgfkhf Yksdjfhgaskjdfhg Blogosphere - rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr - ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss - tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt - yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy - zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz; flags: 0x1
+setxattr: succeeded
+getxattr: fd: 0; attr: article.author; buf: 0x85318b8, name_size: 14; value_size: 50
+article.author=Wkhdasgfkhf Yksdjfhgaskjdfhg
+getxattr: fd: 0; attr: article.venues; buf: 0x8531890, name_size: 14; value_size: 650
+article.venues=Newsforge - Los Angeles Times -  Wkhdasgfkhf Yksdjfhgaskjdfhg Blogosphere - rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr - ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss - tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt - yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy - zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+close: 0
+***********  Done *************
+CMPSC473 Error: fileSetAttr fail: no existing entry for name - incompatible with flag XATTR_REPLACE
+CMPSC473 Error: fileSetAttr fail: already an entry for name - incompatible with flag XATTR_CREATE
+************ Running commands from file cmd4 on filesystem in file fs **********
+open: name = duper; flags = 2
+open: name = super; flags = 1
+open: name = luper; flags = 2
+setxattr: fd: 0; attr: security; value: user_u:sysadm_r:duper_t; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 1; attr: security; value: user_u:sysadm_r:super_t; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 2; attr: security; value: user_u:sysadm_r:init_t; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 1; attr: testing; value: this is still a test; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 1; attr: article.title; value: Innovations in Linux Management; flags: 0x1
+setxattr: succeeded
+setxattr: fd: 0; attr: article.author; value: Wk Yksdjfhgaskjdfhg; flags: 0x2
+setxattr: failed to set attribute name article.author to Wk Yksdjfhgaskjdfhg with flags 2 for fd 0
+setxattr: succeeded
+setxattr: fd: 2; attr: article.title; value: Innovations in Linux Management; flags: 0x1
+setxattr: failed to set attribute name article.title to Innovations in Linux Management with flags 1 for fd 2
+setxattr: succeeded
+getxattr: fd: 0; attr: article.author; buf: 0x90e7990, name_size: 14; value_size: 50
+article.author=
+getxattr: fd: 2; attr: article.author; buf: 0x90e7990, name_size: 14; value_size: 50
+article.author=Wkhdasgfkhf Yksdjfhgaskjdfhg
+getxattr: fd: 1; attr: article.title; buf: 0x90e7990, name_size: 13; value_size: 50
+article.title=Innovations in Linux Management
+getxattr: fd: 2; attr: article.title; buf: 0x90e7990, name_size: 13; value_size: 50
+article.title=Innovations in Window Management
+close: 0
+close: 1
+close: 2
+***********  Done *************
+************ Running commands from file cmd5 on filesystem in file fs **********
+open: name = super; flags = 1
+open: name = luper; flags = 2
+getxattr: fd: 0; attr: security; buf: 0x9072910, name_size: 8; value_size: 50
+security=user_u:sysadm_r:super_t
+getxattr: fd: 1; attr: security; buf: 0x9072910, name_size: 8; value_size: 50
+security=user_u:sysadm_r:init_t
+getxattr: fd: 0; attr: testing; buf: 0x9072910, name_size: 7; value_size: 50
+testing=this is still a test
+getxattr: fd: 1; attr: testing; buf: 0x9072910, name_size: 7; value_size: 50
+testing=basictestvalue
+getxattr: fd: 0; attr: article.title; buf: 0x9072910, name_size: 13; value_size: 50
+article.title=Innovations in Linux Management
+getxattr: fd: 1; attr: article.title; buf: 0x9072910, name_size: 13; value_size: 50
+article.title=Innovations in Window Management
+getxattr: fd: 1; attr: article.venues; buf: 0x9072910, name_size: 14; value_size: 600
+article.venues=Newsforge - Los Angeles Times -  Wkhdasgfkhf Yksdjfhgaskjdfhg Blogosphere - rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr - ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss - tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt - yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy - zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+setxattr: fd: 1; attr: article.venues; value: ; flags: 0x2
+setxattr: succeeded
+getxattr: fd: 1; attr: article.venues; buf: 0x9072910, name_size: 14; value_size: 50
+article.venues=
+close: 0
+close: 1
+***********  Done *************

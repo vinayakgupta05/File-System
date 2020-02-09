@@ -1,0 +1,8 @@
+creat super, 1
+creat duper, 2
+creat luper, 3
+close 0
+close 1
+open duper, 2
+close 2
+close 0

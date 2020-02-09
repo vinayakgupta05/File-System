@@ -1,0 +1,18 @@
+CMPSC473 Error: fileOpen: No such file on disk
+CMPSC473 Error: fileSetAttr: No file corresponds to fd
+CMPSC473 Error: fileSetAttr: No file corresponds to fd
+CMPSC473 Error: fileSetAttr: No file corresponds to fd
+CMPSC473 Error: fileSetAttr: No file corresponds to fd
+CMPSC473 Error: fileClose: No file corresponds to fd
+************ Running commands from file cmd3.test on filesystem in file test_fs **********
+open: name = luper; flags = 2
+getxattr: fd: 0; attr: testing; buf: 0x9e32810, name_size: 7; value_size: 30
+getxattr: error value not found for name testing for fd 0
+getxattr: fd: 0; attr: article.title; buf: 0x9e32838, name_size: 13; value_size: 700
+getxattr: error value not found for name article.title for fd 0
+getxattr: fd: 0; attr: article.author; buf: 0x9e32b00, name_size: 14; value_size: 50
+getxattr: error value not found for name article.author for fd 0
+getxattr: fd: 0; attr: article.venues; buf: 0x9e32b38, name_size: 14; value_size: 650
+getxattr: error value not found for name article.venues for fd 0
+close: 0
+***********  Done *************

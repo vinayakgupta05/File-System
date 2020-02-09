@@ -1,0 +1,8 @@
+open luper, 2
+write 0, data1, 1
+write 0, data2, 1
+seek 0, 500
+read 0, buf, 22
+seek 0, 1000
+read 0, buf, 22
+close 0

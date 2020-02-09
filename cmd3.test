@@ -1,0 +1,6 @@
+open luper, 2
+getxattr 0, testing, buf, 30
+getxattr 0, article.title, buf, 700
+getxattr 0, article.author, buf, 50
+getxattr 0, article.venues, buf, 650
+close 0

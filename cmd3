@@ -1,0 +1,9 @@
+open luper, 2
+setxattr 0, testing, basictestvalue, 1
+getxattr 0, testing, buf, 30
+setxattr 0, article.title, Innovations in Window Management, 1
+setxattr 0, article.author, Wkhdasgfkhf Yksdjfhgaskjdfhg, 1
+setxattr 0, article.venues, Newsforge - Los Angeles Times -  Wkhdasgfkhf Yksdjfhgaskjdfhg Blogosphere - rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr - ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss - tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt - yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy - zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, 1
+getxattr 0, article.author, buf, 50
+getxattr 0, article.venues, buf, 650
+close 0
